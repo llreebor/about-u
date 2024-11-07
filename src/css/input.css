@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	/* If you need dark mode just replace colors in .dark class */
+	:root {
+		--primary: #130e1d;
+		--secondary: #f9f9f9;
+		--neutral: #f0f0f0;
+	}
+	.dark {
+		--primary: #130e1d;
+		--secondary: #f9f9f9;
+		--neutral: #f0f0f0;
+	}
+	.container {
+		@apply !max-w-[1272px];
+	}
+	body {
+		@apply font-inter relative bg-[url('../img/global/bg.png')];
+	}
+	section {
+		@apply p-0;
+	}
+
+	h1 {
+		@apply text-3xl font-medium;
+	}
+}
+
+@layer components {
+	/* Button */
+	.btn {
+		@apply inline-block rounded-lg bg-gradient-to-r from-cyan-400 to-cyan-600 px-8 py-4 text-lg text-blue-400 transition-all hover:from-cyan-600 hover:to-cyan-400;
+	}
+
+	/* Section Title */
+	.section-title {
+		@apply text-3xl font-semibold leading-normal text-black md:text-2xl  sm:text-xl;
+	}
+}
