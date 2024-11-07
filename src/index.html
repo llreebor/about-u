@@ -20,85 +20,102 @@
 			<header>
 				<div class="container">
 					<div class="flex items-center justify-between py-7 md:py-8">
-						<a href=" #" class="z-20 flex">
+						<a href=" #" class="flex">
 							<img src="./img/global/logo.png" alt="logo" />
 						</a>
 						<!-- Desktop menu -->
 						<ul
 							id="menu"
-							class="z-10 hidden animate-fadeIn items-center gap-10 md:flex md:items-center md:justify-center"
+							class="z-10 mr-10 hidden w-full animate-fadeIn items-center gap-6 lg:flex lg:items-center lg:justify-end"
 						>
 							<!-- Menu Item -->
-							<li class="text-black/70 transition-colors hover:text-black">
+							<li class="text-lg hover:text-primary/70">
 								<a href="#">
 									<span>Home</span>
 								</a>
 							</li>
 							<!-- Menu Item With Submenu -->
-							<li
-								class="group relative text-black/70 transition-colors hover:text-black"
-							>
+							<li class="group relative text-lg hover:text-primary/70">
 								<a href="#" class="flex items-center gap-2">
 									<span>Services</span>
 									<svg
+										xmlns="http://www.w3.org/2000/svg"
 										width="24"
 										height="24"
 										viewBox="0 0 24 24"
 										fill="none"
 										class="transition-transform group-hover:rotate-180"
-										xmlns="http://www.w3.org/2000/svg"
 									>
 										<path
-											d="M7 10L12 15L17 10"
-											stroke="black"
-											stroke-opacity="1"
-											stroke-width="2"
-											stroke-linecap="round"
-											stroke-linejoin="round"
+											d="M20.0306 9.53068L12.5306 17.0307C12.4609 17.1004 12.3782 17.1557 12.2871 17.1935C12.1961 17.2312 12.0985 17.2506 11.9999 17.2506C11.9014 17.2506 11.8038 17.2312 11.7127 17.1935C11.6217 17.1557 11.539 17.1004 11.4693 17.0307L3.9693 9.53068C3.82857 9.38995 3.74951 9.19907 3.74951 9.00005C3.74951 8.80103 3.82857 8.61016 3.9693 8.46943C4.11003 8.32869 4.30091 8.24963 4.49993 8.24963C4.69895 8.24963 4.88982 8.32869 5.03055 8.46943L11.9999 15.4397L18.9693 8.46943C19.039 8.39974 19.1217 8.34447 19.2128 8.30676C19.3038 8.26904 19.4014 8.24963 19.4999 8.24963C19.5985 8.24963 19.6961 8.26904 19.7871 8.30676C19.8781 8.34447 19.9609 8.39974 20.0306 8.46943C20.1002 8.53911 20.1555 8.62183 20.1932 8.71288C20.2309 8.80392 20.2503 8.9015 20.2503 9.00005C20.2503 9.0986 20.2309 9.19618 20.1932 9.28722C20.1555 9.37827 20.1002 9.46099 20.0306 9.53068Z"
+											fill="#130E1D"
+											class="group-hover:fill-primary/70"
 										/>
 									</svg>
 
 									<ul
-										class="absolute left-0 top-full hidden min-w-max border border-gray-100 bg-white shadow-sm group-hover:grid"
+										class="absolute left-0 top-full hidden min-w-max overflow-hidden rounded-xl border border-primary/20 bg-white shadow-sm group-hover:grid"
 									>
 										<li>
-											<a class="flex px-3 py-1 hover:bg-gray-100" href="#">
+											<a
+												class="flex px-3 py-1 text-base hover:bg-gray-100 hover:text-primary"
+												href="#"
+											>
 												Product 1
 											</a>
 										</li>
 										<li>
-											<a class="flex px-3 py-1 hover:bg-gray-100" href="#">
+											<a
+												class="flex px-3 py-1 text-base hover:bg-gray-100 hover:text-primary"
+												href="#"
+											>
 												Product 2
 											</a>
 										</li>
 										<li>
-											<a class="flex px-3 py-1 hover:bg-gray-100" href="#">
+											<a
+												class="flex px-3 py-1 text-base hover:bg-gray-100 hover:text-primary"
+												href="#"
+											>
 												Product 3
+											</a>
+										</li>
+										<li>
+											<a
+												class="flex px-3 py-1 text-base hover:bg-gray-100 hover:text-primary"
+												href="#"
+											>
+												Product 4
 											</a>
 										</li>
 									</ul>
 								</a>
 							</li>
 							<!-- Menu Item -->
-							<li class="text-black/70 transition-colors hover:text-black">
+							<li class="text-lg hover:text-primary/70">
 								<a href="#">
 									<span>Hygiene</span>
 								</a>
 							</li>
 							<!-- Menu Item -->
-							<li class="text-black/70 transition-colors hover:text-black">
+							<li class="text-lg hover:text-primary/70">
 								<a href="#">
 									<span>Work with us</span>
 								</a>
 							</li>
 						</ul>
 
-						<a href="#" class="btn btn-secondary">Book Now</a>
+						<a
+							href="#"
+							class="btn btn-secondary ml-auto mr-10 hidden shrink-0 sm:inline-flex lg:mr-0"
+						>
+							Book Now
+						</a>
 
 						<!-- Mobile menu -->
 						<ul
 							id="mobile-menu"
-							class="fixed bottom-0 left-0 right-0 top-0 z-10 hidden h-screen w-screen flex-col items-center justify-center gap-14 overflow-auto bg-slate-900 py-10"
+							class="fixed bottom-0 left-0 right-0 top-0 z-10 hidden h-screen w-screen flex-col items-center justify-center gap-6 overflow-auto bg-primary py-10"
 						>
 							<li>
 								<a href="#" class="text-3xl text-white/80">Home</a>
@@ -111,7 +128,7 @@
 								<div class="flex flex-col gap-2">
 									<!-- Submenu Trigger -->
 									<button class="submenu-trigger flex items-center gap-3">
-										<span class="pointer-events-none">Products</span>
+										<span class="pointer-events-none">Services</span>
 										<svg
 											width="24"
 											height="24"
@@ -133,7 +150,7 @@
 
 									<!-- Submenu Content -->
 									<div
-										class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:grid-rows-[1fr] group-[.active]:bg-red-600"
+										class="submenu grid grid-rows-[0fr] transition-all duration-500 group-[.active]:grid-rows-[1fr]"
 									>
 										<div class="overflow-hidden">
 											<ul class="p-4">
@@ -159,20 +176,25 @@
 							</li>
 
 							<li>
-								<a href="#" class="text-3xl text-white/80">About Us</a>
+								<a href="#" class="text-3xl text-white/80">Hygiene</a>
 							</li>
 							<li>
-								<a href="#" class="text-3xl text-white/80">Features</a>
+								<a href="#" class="text-3xl text-white/80">Work with us</a>
 							</li>
 							<li>
-								<a href="#" class="text-3xl text-white/80">Solution</a>
+								<a
+									href="#"
+									class="btn shrink-0 bg-white hover:bg-white hover:text-primary"
+								>
+									Book Now
+								</a>
 							</li>
 						</ul>
 
 						<!-- Burger Button -->
 						<button
 							id="burger"
-							class="group relative z-20 block h-5 w-[30px] md:hidden"
+							class="group relative z-20 block h-5 w-[30px] lg:hidden"
 						>
 							<span
 								class="absolute left-0 top-0 flex h-[2px] w-[30px] bg-black transition-transform group-[.active]:translate-y-2 group-[.active]:rotate-45 group-[.active]:bg-white"
@@ -190,7 +212,28 @@
 
 			<!-- Main Content -->
 			<main class="flex-auto">
-				<div class="container"></div>
+				<!-- Hero -->
+				<section class="px-5 pt-4">
+					<div
+						class="mx-auto max-w-[1400px] space-y-5 overflow-hidden bg-cover bg-center bg-no-repeat lg:rounded-[40px] lg:bg-[url('../img/home/bg-big.png')] lg:px-20 lg:py-16 lg:pb-[300px]"
+					>
+						<div
+							class="w-full shrink-0 space-y-3 lg:max-w-[540px] lg:space-y-8"
+						>
+							<h1>Nails & Beauty Studio in South Melbourne</h1>
+							<p class="max-w-[279px]">
+								At our studio, we prioritise quality and precision, making each
+								service all about U.
+							</p>
+						</div>
+						<img
+							class="rounded-[40px] lg:hidden"
+							src="./img/home/hero.png"
+							alt="hero image"
+						/>
+						<a href="#" class="btn w-full max-w-full lg:hidden">Book now</a>
+					</div>
+				</section>
 			</main>
 
 			<!-- Footer -->

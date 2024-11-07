@@ -18,25 +18,25 @@
 		@apply !max-w-[1272px];
 	}
 	body {
-		@apply font-inter relative bg-[url('../img/global/bg.png')];
+		@apply relative bg-[url('../img/global/bg.png')] font-inter text-primary;
 	}
 	section {
-		@apply p-0;
+		@apply py-[30px] lg:py-[100px];
 	}
-
 	h1 {
-		@apply text-3xl font-medium;
+		@apply text-4xl font-semibold uppercase leading-[1.07] tracking-[-2px] min-[374px]:text-[41px] md:text-6xl;
+	}
+	p {
+		@apply text-lg leading-tight;
 	}
 }
 
 @layer components {
 	/* Button */
 	.btn {
-		@apply inline-block rounded-lg bg-gradient-to-r from-cyan-400 to-cyan-600 px-8 py-4 text-lg text-blue-400 transition-all hover:from-cyan-600 hover:to-cyan-400;
+		@apply inline-flex justify-center rounded-[32px] border border-primary px-10 py-3 text-center text-lg font-semibold leading-normal transition-colors hover:bg-primary hover:text-white;
 	}
-
-	/* Section Title */
-	.section-title {
-		@apply text-3xl font-semibold leading-normal text-black md:text-2xl  sm:text-xl;
+	.btn-secondary {
+		@apply bg-primary text-white  hover:bg-primary/70;
 	}
 }
