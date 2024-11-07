@@ -749,8 +749,6 @@ select {
   outline: 1px auto -webkit-focus-ring-color;
 }
 
-/* If you need dark mode just replace colors in .dark class */
-
 :root {
   --primary: #130e1d;
   --secondary: #f9f9f9;
@@ -824,13 +822,35 @@ h2 {
 }
 
 h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    text-transform: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 48px;
+    line-height: 1.5;
+  }
+}
+
+h4 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 500;
 }
 
 @media (min-width: 1024px) {
-  h3 {
+  h4 {
     font-size: 32px;
     line-height: 1.5;
   }
@@ -883,7 +903,8 @@ p {
 /* Button */
 
 .btn {
-  display: inline-flex;
+  display: flex;
+  align-items: center;
   justify-content: center;
   border-radius: 32px;
   border-width: 1px;
@@ -897,6 +918,7 @@ p {
   font-size: 1.125rem;
   line-height: 1.75rem;
   font-weight: 600;
+  text-transform: uppercase;
   line-height: 1.5;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1163,24 +1185,20 @@ p {
   height: 30px;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.h-\[\] {
-  height: ;
-}
-
 .h-\[56px\] {
   height: 56px;
 }
 
 .h-auto {
   height: auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .min-h-7 {
@@ -1227,6 +1245,10 @@ p {
   width: 70px;
 }
 
+.w-\[72px\] {
+  width: 72px;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -1238,10 +1260,6 @@ p {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[72px\] {
-  width: 72px;
 }
 
 .min-w-full {
@@ -1416,10 +1434,22 @@ p {
   gap: 2rem;
 }
 
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
 .space-y-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .space-y-5 > :not([hidden]) ~ :not([hidden]) {
@@ -1428,16 +1458,10 @@ p {
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
-
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -1579,6 +1603,11 @@ p {
   background-color: rgb(19 14 29 / var(--tw-bg-opacity));
 }
 
+.bg-secondary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 249 249 / var(--tw-bg-opacity));
+}
+
 .bg-slate-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
@@ -1641,6 +1670,11 @@ p {
   padding-right: 0.25rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1666,6 +1700,11 @@ p {
   padding-right: 1.25rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1686,9 +1725,19 @@ p {
   padding-bottom: 0.625rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .py-7 {
@@ -1699,11 +1748,6 @@ p {
 .py-\[2px\] {
   padding-top: 2px;
   padding-bottom: 2px;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .pb-2\.5 {
@@ -2432,30 +2476,6 @@ p {
     display: none;
   }
 
-  .sm\:h-full {
-    height: 100%;
-  }
-
-  .sm\:w-full {
-    width: 100%;
-  }
-
-  .sm\:w-1\/2 {
-    width: 50%;
-  }
-
-  .sm\:w-\[45\%\] {
-    width: 45%;
-  }
-
-  .sm\:w-\[40\%\] {
-    width: 40%;
-  }
-
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .sm\:flex-col {
     flex-direction: column;
   }
@@ -2472,12 +2492,6 @@ p {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-  }
-
-  .sm\:space-y-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
   .sm\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -2501,16 +2515,16 @@ p {
     margin-top: 3.5rem;
   }
 
-  .md\:block {
-    display: block;
-  }
-
   .md\:flex {
     display: flex;
   }
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:max-w-\[291px\] {
+    max-width: 291px;
   }
 
   .md\:grid-cols-2 {
@@ -2525,8 +2539,17 @@ p {
     justify-content: center;
   }
 
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
   .md\:gap-y-12 {
     row-gap: 3rem;
+  }
+
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .md\:py-8 {
@@ -2534,12 +2557,12 @@ p {
     padding-bottom: 2rem;
   }
 
-  .md\:pb-10 {
-    padding-bottom: 2.5rem;
+  .md\:text-left {
+    text-align: left;
   }
 
-  .md\:pb-2 {
-    padding-bottom: 0.5rem;
+  .md\:leading-none {
+    line-height: 1;
   }
 
   .first\:md\:pl-0:first-child {
@@ -2569,10 +2592,6 @@ p {
     display: none;
   }
 
-  .lg\:w-\[45\%\] {
-    width: 45%;
-  }
-
   .lg\:w-\[48\%\] {
     width: 48%;
   }
@@ -2593,6 +2612,12 @@ p {
     --tw-space-y-reverse: 0;
     margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:space-y-10 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
   }
 
   .lg\:rounded-\[40px\] {

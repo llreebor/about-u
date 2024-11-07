@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-	/* If you need dark mode just replace colors in .dark class */
 	:root {
 		--primary: #130e1d;
 		--secondary: #f9f9f9;
@@ -30,6 +29,9 @@
 		@apply text-[34px] font-semibold leading-[1.05] tracking-[-1px] lg:text-[56px] lg:leading-[1.07];
 	}
 	h3 {
+		@apply text-xl font-semibold uppercase md:text-3xl md:normal-case lg:text-[48px] lg:leading-normal;
+	}
+	h4 {
 		@apply text-2xl font-medium lg:text-[32px] lg:leading-normal;
 	}
 	p {
@@ -40,7 +42,7 @@
 @layer components {
 	/* Button */
 	.btn {
-		@apply inline-flex justify-center rounded-[32px] border border-primary px-10 py-3 text-center text-lg font-semibold leading-normal transition-colors hover:bg-primary hover:text-white;
+		@apply flex items-center justify-center rounded-[32px] border border-primary px-10 py-3 text-center text-lg font-semibold uppercase leading-normal transition-colors hover:bg-primary hover:text-white;
 	}
 	.btn-secondary {
 		@apply bg-primary text-white  hover:bg-primary/70;
