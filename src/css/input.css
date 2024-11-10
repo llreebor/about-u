@@ -13,17 +13,18 @@
 		--secondary: #f9f9f9;
 		--neutral: #f0f0f0;
 	}
+
 	.container {
 		@apply !max-w-[1272px];
 	}
 	body {
-		@apply relative bg-[url('../img/global/bg.png')] font-inter text-primary;
+		@apply bg-body relative font-inter text-primary;
 	}
 	section {
 		@apply py-[30px] lg:py-[100px];
 	}
 	h1 {
-		@apply text-4xl font-semibold uppercase leading-[1.07] tracking-[-2px] min-[374px]:text-[41px] md:text-6xl;
+		@apply text-4xl font-semibold uppercase leading-[1.07] tracking-[-2px] min-[374px]:text-[41px] md:text-[63px] md:leading-[1.03];
 	}
 	h2 {
 		@apply text-[34px] font-semibold leading-[1.05] tracking-[-1px] lg:text-[56px] lg:leading-[1.07];
@@ -42,7 +43,7 @@
 @layer components {
 	/* Button */
 	.btn {
-		@apply flex items-center justify-center rounded-[32px] border border-primary px-10 py-3 text-center text-lg font-semibold uppercase leading-normal transition-colors hover:bg-primary hover:text-white;
+		@apply flex items-center justify-center gap-2.5 rounded-[32px] border border-primary px-10 py-3 text-center text-lg font-semibold uppercase leading-normal transition-colors hover:bg-primary hover:text-white;
 	}
 	.btn-secondary {
 		@apply bg-primary text-white  hover:bg-primary/70;

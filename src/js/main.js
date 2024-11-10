@@ -22,7 +22,6 @@ function burgerMenu() {
 	})
 }
 burgerMenu()
-
 function toggleSubmenu() {
 	const submenuTriggers = document.querySelectorAll('.with-submenu')
 
@@ -36,4 +35,33 @@ function toggleSubmenu() {
 }
 toggleSubmenu()
 
-// Animated Tabs
+// Home Page Scripts
+if (document.getElementById('home')) {
+	// Testimonials slider
+	new Swiper('.swiper__testimonials', {
+		loop: true,
+		navigation: {
+			nextEl: '.testimonials__next',
+			prevEl: '.testimonials__prev',
+		},
+		// Responsive breakpoints
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+				slidesPerView: 1.2,
+				spaceBetween: 16,
+			},
+
+			// when window width is >= 640px
+			640: {
+				slidesPerView: 2,
+				spaceBetween: 16,
+			},
+			// when window width is >= 992px
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 24,
+			},
+		},
+	})
+}

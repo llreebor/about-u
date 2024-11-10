@@ -8,6 +8,10 @@ module.exports = {
 			padding: '16px',
 		},
 		extend: {
+			backgroundImage: {
+				body: 'url(../img/global/bg.png)',
+				footer: 'url(../img/global/footer-bg.png)',
+			},
 			fontFamily: {
 				inter: ['Inter', 'sans-serif'],
 			},
