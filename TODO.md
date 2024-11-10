@@ -6,4 +6,3 @@
 - Make testimonials section
 - Leave comment about missing section
 - Check sections padding
-- Fix OurLocation button

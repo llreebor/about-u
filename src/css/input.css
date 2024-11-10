@@ -1,24 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+:root {
+	--primary: #130e1d;
+	--secondary: #f9f9f9;
+	--neutral: #f0f0f0;
+}
+.dark {
+	--primary: #130e1d;
+	--secondary: #f9f9f9;
+	--neutral: #f0f0f0;
+}
 @layer base {
-	:root {
-		--primary: #130e1d;
-		--secondary: #f9f9f9;
-		--neutral: #f0f0f0;
-	}
-	.dark {
-		--primary: #130e1d;
-		--secondary: #f9f9f9;
-		--neutral: #f0f0f0;
-	}
-
 	.container {
 		@apply !max-w-[1272px];
 	}
 	body {
-		@apply bg-body relative font-inter text-primary;
+		@apply relative bg-body font-inter text-primary;
 	}
 	section {
 		@apply py-[30px] lg:py-[100px];
@@ -47,5 +45,10 @@
 	}
 	.btn-secondary {
 		@apply bg-primary text-white  hover:bg-primary/70;
+	}
+
+	/* Tab Button */
+	.tab-button.active {
+		@apply bg-[#E8E8E8] transition-all;
 	}
 }
