@@ -161,7 +161,7 @@ if (document.getElementById('home')) {
 		},
 	})
 
-	// Tab SLider 1
+	// Price Tab SLider 1
 	new Swiper('.tab-swiper-1', {
 		// Optional parameters
 		spaceBetween: 20,
@@ -170,7 +170,7 @@ if (document.getElementById('home')) {
 			el: '.swiper-pagination',
 		},
 	})
-	// Tab SLider 2
+	// Price Tab SLider 2
 	new Swiper('.tab-swiper-2', {
 		// Optional parameters
 		spaceBetween: 20,
@@ -179,7 +179,7 @@ if (document.getElementById('home')) {
 			el: '.swiper-pagination',
 		},
 	})
-	// Tab SLider 3
+	// Price Tab SLider 3
 	new Swiper('.tab-swiper-3', {
 		// Optional parameters
 		spaceBetween: 20,
@@ -188,13 +188,41 @@ if (document.getElementById('home')) {
 			el: '.swiper-pagination',
 		},
 	})
-	// Tab SLider 4
+	// Price Tab SLider 4
 	new Swiper('.tab-swiper-4', {
 		// Optional parameters
 		spaceBetween: 20,
 		// If we need pagination
 		pagination: {
 			el: '.swiper-pagination',
+		},
+	})
+}
+
+// Service Manicure Scripts Only
+if (document.getElementById('service-manicure')) {
+	// Price SLider
+	new Swiper('.tab-swiper-manicure', {
+		// Optional parameters
+		spaceBetween: 20,
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+		},
+	})
+
+	// Technique SLider
+	new Swiper('.manicure-technique-slider', {
+		// Optional parameters
+		spaceBetween: 20,
+		slidesPerView: 1.1,
+		breakpoints: {
+			440: {
+				slidesPerView: 1.5,
+			},
+			768: {
+				slidesPerView: 5,
+			},
 		},
 	})
 }
