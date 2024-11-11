@@ -44,11 +44,20 @@
 		@apply flex items-center justify-center gap-2.5 rounded-[32px] border border-primary px-10 py-3 text-center text-lg font-semibold uppercase leading-normal transition-colors hover:bg-primary hover:text-white;
 	}
 	.btn-secondary {
-		@apply bg-primary text-white  hover:bg-primary/70;
+		@apply bg-primary text-white hover:bg-primary/70;
 	}
 
 	/* Tab Button */
 	.tab-button.active {
 		@apply bg-[#E8E8E8] transition-all;
 	}
+}
+/* Swiper Bullets */
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	background-color: rgb(19 14 29 / 0.2);
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background-color: rgb(19 14 29 / 0.4);
 }

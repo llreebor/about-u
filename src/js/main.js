@@ -35,7 +35,103 @@ function toggleSubmenu() {
 }
 toggleSubmenu()
 
-// Home Page Scripts
+// Shared Scripts
+// Tabs
+if (document.getElementById('tabs')) {
+	document.addEventListener('DOMContentLoaded', function () {
+		const tabButtons = document.querySelectorAll('.tab-button')
+		const tabContents = document.querySelectorAll('.tab-content')
+		const dropdownButton = document.getElementById('dropdownButton')
+		const dropdownIcon = document.getElementById('dropdownIcon')
+		const dropdownText = document.getElementById('dropdownText')
+		const dropdownMenu = document.getElementById('dropdownMenu')
+		const dropdownItems = dropdownMenu.querySelectorAll('li')
+
+		function hideAllTabs() {
+			tabContents.forEach((content) => content.classList.add('hidden'))
+		}
+
+		function showTab(id) {
+			document.getElementById(id).classList.remove('hidden')
+		}
+
+		function deactivateAllButtons() {
+			tabButtons.forEach((button) => button.classList.remove('active'))
+		}
+
+		tabButtons.forEach((button) => {
+			button.addEventListener('click', function () {
+				hideAllTabs()
+				showTab(this.dataset.target)
+				deactivateAllButtons()
+				this.classList.add('active')
+			})
+		})
+
+		dropdownButton.addEventListener('click', function () {
+			dropdownMenu.classList.toggle('hidden')
+			dropdownIcon.classList.toggle('rotate-180')
+		})
+
+		dropdownItems.forEach((item) => {
+			item.addEventListener('click', function () {
+				hideAllTabs()
+				showTab(this.dataset.target)
+				dropdownText.textContent = item.textContent // Update button text
+				dropdownMenu.classList.add('hidden')
+				dropdownIcon.classList.toggle('rotate-180')
+				deactivateAllButtons()
+				// Here this line should activate the corresponding desktop tab button if needed
+				document
+					.querySelector(`.tab-button[data-target="${this.dataset.target}"]`)
+					.classList.add('active-tab')
+			})
+		})
+
+		// Initial load
+		hideAllTabs()
+		showTab(dropdownItems[0].dataset.target)
+		dropdownText.textContent = dropdownItems[0].textContent
+		document
+			.querySelector(
+				`.tab-button[data-target="${dropdownItems[0].dataset.target}"]`,
+			)
+			.classList.add('active-tab')
+	})
+}
+// Accordion
+if (document.getElementById('accordion')) {
+	function accordion() {
+		const items = document.querySelectorAll('.accordion-item')
+		const triggers = document.querySelectorAll('.accordion-trigger')
+		const contents = document.querySelectorAll('.accordion-content')
+		triggers.forEach((trigger) => {
+			if (items[0].classList.contains('active')) {
+				contents[0].classList.add('active')
+			}
+			trigger.addEventListener('click', () => {
+				const parent = trigger.parentNode
+				if (!parent.classList.contains('active')) {
+					// If you want only one to be open at a time, and others to close - UNCOMMENT the code below.
+					// items.forEach((item, i) => {
+					// 	if (i !== idx && item.classList.contains('active')) {
+					// 		item.classList.remove('active')
+					// 	}
+					// })
+					// Open the current accordion item
+
+					parent.classList.add('active')
+				} else {
+					// Close the current accordion item
+					parent.classList.remove('active')
+				}
+			})
+		})
+	}
+	accordion()
+}
+
+// Home Page Scripts Only
 if (document.getElementById('home')) {
 	// Testimonials slider
 	new Swiper('.swiper__testimonials', {
@@ -62,6 +158,43 @@ if (document.getElementById('home')) {
 				slidesPerView: 3,
 				spaceBetween: 24,
 			},
+		},
+	})
+
+	// Tab SLider 1
+	new Swiper('.tab-swiper-1', {
+		// Optional parameters
+		spaceBetween: 20,
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+		},
+	})
+	// Tab SLider 2
+	new Swiper('.tab-swiper-2', {
+		// Optional parameters
+		spaceBetween: 20,
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+		},
+	})
+	// Tab SLider 3
+	new Swiper('.tab-swiper-3', {
+		// Optional parameters
+		spaceBetween: 20,
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+		},
+	})
+	// Tab SLider 4
+	new Swiper('.tab-swiper-4', {
+		// Optional parameters
+		spaceBetween: 20,
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
 		},
 	})
 }
