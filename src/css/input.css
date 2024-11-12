@@ -43,8 +43,8 @@
 	.btn {
 		@apply flex items-center justify-center gap-2.5 rounded-[32px] border border-primary px-10 py-3 text-center text-lg font-semibold uppercase leading-normal transition-colors hover:bg-primary hover:text-white;
 	}
-	.btn-secondary {
-		@apply bg-primary text-white hover:bg-primary/70;
+	.btn.btn-secondary {
+		@apply bg-primary text-white hover:border-transparent hover:bg-primary/70;
 	}
 
 	/* Tab Button */
