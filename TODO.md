@@ -6,3 +6,5 @@
 - Leave comment about missing section
 - Check sections padding
 - Change mobile menu link colors
+- Finall check
+- Compress images
