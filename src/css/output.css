@@ -1163,6 +1163,34 @@ p {
   width: 100vw;
 }
 
+.w-\[48\%\] {
+  width: 48%;
+}
+
+.w-\[98\%\] {
+  width: 98%;
+}
+
+.w-\[75\%\] {
+  width: 75%;
+}
+
+.w-\[73\%\] {
+  width: 73%;
+}
+
+.w-\[80\%\] {
+  width: 80%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
+.w-\[65\%\] {
+  width: 65%;
+}
+
 .min-w-max {
   min-width: -moz-max-content;
   min-width: max-content;
@@ -1186,6 +1214,11 @@ p {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.max-w-fit {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .flex-auto {
@@ -1607,6 +1640,14 @@ p {
   padding-top: 1.5rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -2005,6 +2046,10 @@ p {
     max-width: 100%;
   }
 
+  .md\:max-w-\[500px\] {
+    max-width: 500px;
+  }
+
   .md\:shrink-0 {
     flex-shrink: 0;
   }
@@ -2051,6 +2096,10 @@ p {
 
   .md\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
   }
 
   .md\:gap-y-12 {
