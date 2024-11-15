@@ -947,6 +947,10 @@ p {
   pointer-events: none;
 }
 
+.static {
+  position: static;
+}
+
 .fixed {
   position: fixed;
 }
@@ -989,6 +993,14 @@ p {
 
 .z-20 {
   z-index: 20;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
 }
 
 .mx-auto {
@@ -1905,6 +1917,10 @@ p {
 }
 
 @media (min-width: 768px) {
+  .md\:absolute {
+    position: absolute;
+  }
+
   .md\:order-1 {
     order: 1;
   }
@@ -1963,6 +1979,14 @@ p {
 
   .md\:w-full {
     width: 100%;
+  }
+
+  .md\:w-\[48\%\] {
+    width: 48%;
+  }
+
+  .md\:w-\[72px\] {
+    width: 72px;
   }
 
   .md\:max-w-\[283px\] {
@@ -2237,6 +2261,22 @@ p {
     width: 100%;
   }
 
+  .lg\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .lg\:w-\[80\%\] {
+    width: 80%;
+  }
+
+  .lg\:w-\[60\%\] {
+    width: 60%;
+  }
+
+  .lg\:w-\[55\%\] {
+    width: 55%;
+  }
+
   .lg\:max-w-\[500px\] {
     max-width: 500px;
   }
@@ -2291,6 +2331,10 @@ p {
     grid-template-rows: 1fr;
   }
 
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+
   .lg\:items-center {
     align-items: center;
   }
@@ -2301,6 +2345,10 @@ p {
 
   .lg\:gap-14 {
     gap: 3.5rem;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
   }
 
   .lg\:space-y-10 > :not([hidden]) ~ :not([hidden]) {
